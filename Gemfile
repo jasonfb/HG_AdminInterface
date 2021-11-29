@@ -37,3 +37,4 @@ gem 'turbo-rails'
 
 gem 'hot-glue', path: '/Users/jason/Work/Hot_Glue/hot-glue'
 gem 'bootstrap', '~> 5.1.3'
+gem 'font-awesome-sass', '~> 5.15.1'
