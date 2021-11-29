@@ -1,0 +1,20 @@
+<%= link_to "<i class='fa fa-arrow-circle-left  2x'></i> Back to list".html_safe, admin_accounts_path %>
+
+<%= turbo_frame_tag "account__#{@account.id}" do  %>
+
+  <div class="cell editable" style="position: relative;">
+
+    <% if @account.errors.any? %>
+      <%= render(partial: "#{controller.namespace}errors", locals: {resource: @account }) %>
+    <% end %>
+
+    <h2>Editing <%= @account.name %></h2>
+    <%= form_with model: @account, url: admin_account_path(@account) do |f| %>
+    <%=  render partial: "form",  locals: {:account => @account, f: f} %>
+    <% end %>
+
+  </div>
+
+<% end %>
+
+
