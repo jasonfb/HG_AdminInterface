@@ -36,3 +36,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'turbo-rails'
 
 gem 'hot-glue', path: '/Users/jason/Work/Hot_Glue/hot-glue'
+gem 'bootstrap', '~> 5.1.3'

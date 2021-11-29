@@ -11,3 +11,4 @@ import "channels"
 Rails.start()
 Turbo.start()
 ActiveStorage.start()
+import 'require_bootstrap'
