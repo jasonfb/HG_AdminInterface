@@ -7,6 +7,8 @@ gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'sass-rails', '>= 6'
+gem 'sassc'
+
 gem 'webpacker', '~> 5.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
@@ -36,7 +38,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'turbo-rails'
 
 gem 'hot-glue', path: '/Users/jason/Work/Hot_Glue/hot-glue'
-gem 'bootstrap', '~> 5.1.3'
+
 gem 'font-awesome-sass', '~> 5.15.1'
 
 gem 'activerecord-pg_enum'
+
+gem 'devise'
+
+gem 'bootstrap', '~> 5.1.3'
