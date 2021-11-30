@@ -1,20 +1,20 @@
 <%= turbo_frame_tag "accounts-list" do %>
-  <div class="container-fluid ">
+  <div class="container-fluid scaffold-list">
     <h4>ACCOUNTS</h4>
 
     <%= render partial: "admin/accounts/new_button", locals: {}%>
 
-    <div class="row">
-      <div class='col'  style='flex-basis: 14%'>Name</div>
-<div class='col'  style='flex-basis: 14%'>Is admin</div>
-<div class='col'  style='flex-basis: 14%'>Email</div>
-       <div class="col" style="flex-basis: 50%">
+    <div class="row scaffold-row">
+      <div class='col'  style='flex-basis: 15%'>Name</div>
+<div class='col'  style='flex-basis: 15%'>Is admin</div>
+<div class='col'  style='flex-basis: 15%'>Email</div>
+       <div class="col scaffold-col-heading" style="flex-basis: 45%">
       <h4>
         Persons
       </h4>
       </div> 
 
-      <div class='col buttons-col' style="flex-basis: 7%"></div>
+      <div class='col scaffold-col-heading scaffold-col-heading-buttons' style="flex-basis: 150px"></div>
     </div>
 
       <% if accounts.empty? %>

@@ -1,6 +1,6 @@
 
 <%= turbo_frame_tag "account__#{ account.id }" do  %>
-  <div class='row' data-id='<%= account.id %>' data-edit='false'>
+  <div class='row scaffold-row' data-id='<%= account.id %>' data-edit='false'>
     <%= render partial: 'admin/accounts/show', locals: { account: account } %>
   </div>
 <% end %>

@@ -1,7 +1,7 @@
-<div class='col'  style='flex-basis: 14%'>
+<div class='scaffold-cell'  style='flex-basis: 15%'>
   <%= account.name %>
 </div>
-<div class='col'  style='flex-basis: 14%'>
+<div class='scaffold-cell'  style='flex-basis: 15%'>
   <% if account.is_admin.nil? %>
       <span class='alert-danger'>MISSING</span>
   <% elsif account.is_admin %>
@@ -11,19 +11,19 @@
   <% end %>
 </div>
 
-<div class='col'  style='flex-basis: 14%'>
+<div class='scaffold-cell'  style='flex-basis: 15%'>
   <%= account.email %>
 </div>
 
 
-  <div class="col" style="flex-basis: 50%" >
+  <div class="col" style="flex-basis: 45%" >
   <%= render partial: "admin/persons/list", locals: {
   account: account,
   persons: account.persons} %>
   </div>
 
 
-<div class="col" style="flex-basis: 7em;">
+<div class="col scaffold-line-buttons" style="flex-basis: 150px;">
   
     <%= form_with url: admin_account_path(account), html: {style: "display: inline-block;"}, method: :delete do |f| %>
       <%= f.submit "Delete".html_safe, data: {confirm: 'Are you sure?'}, class: "delete-account-button btn btn-primary btn-sm" %>
