@@ -1,13 +1,13 @@
 <%= turbo_frame_tag "accounts-list" do %>
-  <div class="container-fluid scaffold-list">
+  <div class="scaffold-container scaffold-list">
     <h4>ACCOUNTS</h4>
 
     <%= render partial: "admin/accounts/new_button", locals: {}%>
 
     <div class="row scaffold-row">
-      <div class='col'  style='flex-basis: 15%'>Name</div>
-<div class='col'  style='flex-basis: 15%'>Is admin</div>
-<div class='col'  style='flex-basis: 15%'>Email</div>
+      <div class='scaffold-cell'  style='flex-basis: 15%'>Name</div>
+<div class='scaffold-cell'  style='flex-basis: 15%'>Is admin</div>
+<div class='scaffold-cell'  style='flex-basis: 15%'>Email</div>
        <div class="col scaffold-col-heading" style="flex-basis: 45%">
       <h4>
         Persons

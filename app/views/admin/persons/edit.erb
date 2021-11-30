@@ -5,7 +5,7 @@
   <div class="cell editable" style="position: relative;">
 
     <% if @person.errors.any? %>
-      <%= render(partial: "#{controller.namespace}errors", locals: {resource: @person }) %>
+      <%= render(partial: "admin/errors", locals: {resource: @person }) %>
     <% end %>
 
     <h2>Editing <%= @person.name %></h2>

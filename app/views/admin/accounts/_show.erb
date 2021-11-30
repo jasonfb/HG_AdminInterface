@@ -16,14 +16,14 @@
 </div>
 
 
-  <div class="col" style="flex-basis: 45%" >
+  <div class="scaffold-cell scaffold-downnest" style="flex-basis: 45%" >
   <%= render partial: "admin/persons/list", locals: {
   account: account,
   persons: account.persons} %>
   </div>
 
 
-<div class="col scaffold-line-buttons" style="flex-basis: 150px;">
+<div class="scaffold-cell scaffold-line-buttons" style="flex-basis: 150px;">
   
     <%= form_with url: admin_account_path(account), html: {style: "display: inline-block;"}, method: :delete do |f| %>
       <%= f.submit "Delete".html_safe, data: {confirm: 'Are you sure?'}, class: "delete-account-button btn btn-primary btn-sm" %>

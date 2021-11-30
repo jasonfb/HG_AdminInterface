@@ -1,11 +1,11 @@
 <%= turbo_frame_tag "persons-list" do %>
-  <div class="container-fluid scaffold-list">
+  <div class="scaffold-container scaffold-list">
     <h4>PERSONS</h4>
 
     <%= render partial: "admin/persons/new_button", locals: {account: account}%>
 
     <div class="row scaffold-row">
-      <div class='col'  style='flex-basis: 85%'>Name</div>
+      <div class='scaffold-cell'  style='flex-basis: 85%'>Name</div>
       
 
       <div class='col scaffold-col-heading scaffold-col-heading-buttons' style="flex-basis: 150px"></div>

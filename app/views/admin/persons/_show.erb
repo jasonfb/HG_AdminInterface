@@ -4,7 +4,7 @@
 
 
 
-<div class="col scaffold-line-buttons" style="flex-basis: 150px;">
+<div class="scaffold-cell scaffold-line-buttons" style="flex-basis: 150px;">
   
     <%= form_with url: admin_account_person_path(account,person), html: {style: "display: inline-block;"}, method: :delete do |f| %>
       <%= f.submit "Delete".html_safe, data: {confirm: 'Are you sure?'}, class: "delete-person-button btn btn-primary btn-sm" %>
