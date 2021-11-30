@@ -1,0 +1,27 @@
+<%= turbo_frame_tag "persons-list" do %>
+  <div class="container-fluid ">
+    <h4>PERSONS</h4>
+    <div class="row">
+      <div class="col-md-12">
+        <%= render partial: "admin/persons/new_button", locals: {account: account}%>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class='col'>Name</div>
+      <div class='col buttons-col'></div>
+    </div>
+
+      <% if persons.empty? %>
+        <div>
+            None
+        </div>
+      <% end %>
+      <% persons.each do |person| %>
+        <%= render partial: 'admin/persons/line', locals: {person: person, account: account } %>
+      <% end %>
+
+    <% if persons.respond_to?(:total_pages) %><%= paginate(persons) %> <% end %>
+  </div>
+<% end %>

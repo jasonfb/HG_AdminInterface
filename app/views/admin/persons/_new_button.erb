@@ -1,0 +1,3 @@
+<%= turbo_frame_tag "person-new" do %>
+  <%= link_to "New Person",  new_admin_account_person_path(account.id), disable_with: "Loading...", class: "new-person-button btn btn-primary pull-right" %>
+<% end %>

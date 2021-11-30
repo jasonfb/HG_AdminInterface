@@ -3,6 +3,8 @@ Rails.application.routes.draw do
     resources :services # at the top level of the namespace
 
     resources :accounts do # at the top level of the namespace
+      resources :persons
+
       resources :invoices do
         resources :line_items do
           resources :sittings do
