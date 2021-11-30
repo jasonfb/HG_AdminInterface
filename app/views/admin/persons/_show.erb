@@ -1,13 +1,13 @@
-<div class='col'>
+<div class='col'  style='flex-basis: 93%'>
   <%= person.name %>
 </div>
 
 
 
-<div class="col">
+<div class="col" style="flex-basis: 7em;">
   
-    <%= form_with url: admin_account_person_path(account,person), method: :delete do |f| %>
-      <%= f.submit "Delete".html_safe, data: {confirm: 'Are you sure?'}, class: "delete-person-button btn btn-primary " %>
+    <%= form_with url: admin_account_person_path(account,person), html: {style: "display: inline-block;"}, method: :delete do |f| %>
+      <%= f.submit "Delete".html_safe, data: {confirm: 'Are you sure?'}, class: "delete-person-button btn btn-primary btn-sm" %>
     <% end %>
   
 
@@ -15,6 +15,6 @@
   
 
   
-  <%= link_to "Edit <i class='fa fa-1x fa-list-alt'></i>".html_safe, edit_admin_account_person_path(account,person), disable_with: "Loading...", class: "edit-person-button btn btn-primary " %>
+  <%= link_to "Edit <i class='fa fa-1x fa-list-alt'></i>".html_safe, edit_admin_account_person_path(account,person), disable_with: "Loading...", class: "edit-person-button btn btn-primary btn-sm" %>
   
 </div>

@@ -1,7 +1,7 @@
-<div class='col'>
+<div class='col'  style='flex-basis: 14%'>
   <%= account.name %>
 </div>
-<div class='col'>
+<div class='col'  style='flex-basis: 14%'>
   <% if account.is_admin.nil? %>
       <span class='alert-danger'>MISSING</span>
   <% elsif account.is_admin %>
@@ -11,16 +11,22 @@
   <% end %>
 </div>
 
-<div class='col'>
+<div class='col'  style='flex-basis: 14%'>
   <%= account.email %>
 </div>
 
 
+  <div class="col" style="flex-basis: 50%" >
+  <%= render partial: "admin/persons/list", locals: {
+  account: account,
+  persons: account.persons} %>
+  </div>
 
-<div class="col">
+
+<div class="col" style="flex-basis: 7em;">
   
-    <%= form_with url: admin_account_path(account), method: :delete do |f| %>
-      <%= f.submit "Delete".html_safe, data: {confirm: 'Are you sure?'}, class: "delete-account-button btn btn-primary " %>
+    <%= form_with url: admin_account_path(account), html: {style: "display: inline-block;"}, method: :delete do |f| %>
+      <%= f.submit "Delete".html_safe, data: {confirm: 'Are you sure?'}, class: "delete-account-button btn btn-primary btn-sm" %>
     <% end %>
   
 
@@ -28,6 +34,6 @@
   
 
   
-  <%= link_to "Edit <i class='fa fa-1x fa-list-alt'></i>".html_safe, edit_admin_account_path(account), disable_with: "Loading...", class: "edit-account-button btn btn-primary " %>
+  <%= link_to "Edit <i class='fa fa-1x fa-list-alt'></i>".html_safe, edit_admin_account_path(account), disable_with: "Loading...", class: "edit-account-button btn btn-primary btn-sm" %>
   
 </div>
